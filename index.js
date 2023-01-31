@@ -71,6 +71,7 @@ async function loginHelper(page, callback) {
         }
         case /privacy_mutation_token/g: {
             loginWithEmailAndPassword({ callback: callback });
+            break;
         }
         default: {
             let cookies = await page.cookies();
