@@ -15,13 +15,13 @@
 <!-- Install -->
 ## Install
 ### Install
-- Unknow
+- Can't use `npm install`, I'm learning more. <a href=https://m.me/s2.henry>You can do it?</a>
 ### Use
-- Login With Email And Password: `loginWithEmailAndPassword`
+- Login With Email And Password: `loginWithEmailAndPassword(email, password, callback)`
 ```sh
 var { loginWithEmailAndPassword } = require('./index');
 var { readFileSync } = require('fs');
-var configs = JSON.parse(readFileSync('./configs.json')); //You can save email and password and used like this
+var configs = JSON.parse(readFileSync('./configs.json')); //You can save email, password and used like this
 var { email, password } = configs
 
 loginWithEmailAndPassword(email, password, async function (error, api) {
@@ -31,7 +31,7 @@ loginWithEmailAndPassword(email, password, async function (error, api) {
     })
 });
 ```
-- Login With Cookies: `loginWithCookies`
+- Login With Cookies: `loginWithCookies(cookies, callback)`
 ```sh
 var { loginWithCookies } = require('./index');
 var { readFileSync } = require('fs');
@@ -44,7 +44,7 @@ loginWithCookies(cookies, async function(error, api) {
     })
 });
 ```
-- Set Option: `setOptions()`
+- Set Option: `setOptions(options)`
 ```sh
 var { setOptions, loginWithCookies, loginWithEmailAndPassword } = require('./index');
 var newOptions = {
