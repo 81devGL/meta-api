@@ -11,13 +11,14 @@ var Cli = {
 
 var options = {
     markAsRead: false,
-    debugMode: false
+    debugMode: false,
+    headless: true
 }
 
 async function startBrowser() {
     if (!Cli.browser && !Cli.page) {
         const browser = await puppeteer.launch({
-            headless: false,
+            headless: options.headless,
             args: ["--no-sandbox", "--disabled-setupid-sandbox"]
         });
 
