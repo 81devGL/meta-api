@@ -12,7 +12,7 @@ var Cli = {
 var options = {
     markAsRead: false,
     debugMode: false,
-    headless: true
+    headless: false
 }
 
 async function startBrowser() {
@@ -65,11 +65,11 @@ async function loginWithEmailAndPassword(email, password, callback) {
 
 async function loginHelper(page, callback) {
     switch (page.url()) {
-        case /checkpoint/g: {
+        case /checkpoint/g.test(page.url()): {
             //Checkpoint Handle
             break;
         }
-        case /privacy_mutation_token/g: {
+        case /privacy_mutation_token/g.test(page.url()): {
             loginWithEmailAndPassword({ callback: callback });
             break;
         }
