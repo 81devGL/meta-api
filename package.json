@@ -6,8 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoahenry/meta-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoahenry/meta-api/issues"
+  },
   "keywords": [
-    "Meta"
+    "Meta",
+    "Chat",
+    "Bot Chat",
+    "Bot"
   ],
   "author": "Henry",
   "license": "ISC",
