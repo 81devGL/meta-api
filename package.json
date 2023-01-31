@@ -11,7 +11,7 @@
     "url": "git+https://github.com/hoahenry/meta-api.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@hoahenry:registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/hoahenry/meta-api/issues"
