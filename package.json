@@ -1,0 +1,19 @@
+{
+  "name": "meta-api",
+  "version": "1.0.0",
+  "description": "Meta API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Meta"
+  ],
+  "author": "Henry",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.6.2",
+    "moment-timezone": "0.5.40",
+    "readline-sync": "1.4.10"
+  }
+}
