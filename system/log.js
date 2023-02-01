@@ -10,5 +10,6 @@ module.exports = (type, data) => {
         data = type
         type = 'default'
     }
-    return console.log(color[type].replace(/%type/g, type == 'default' ? "MessengerAPI" : type.toUpperCase()).replace(/%hours/g, utils.getTime('HH:mm:ss')).replace(/%data/g, data));
+    if (typeof data == 'object') data = JSON.stringify(data);
+    return console.log(color[type].replace(/%type/g, type == 'default' ? "Meta API" : type.toUpperCase()).replace(/%hours/g, utils.getTime('HH:mm:ss')).replace(/%data/g, data));
 };
